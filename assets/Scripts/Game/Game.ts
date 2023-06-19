@@ -28,8 +28,9 @@ export class Game extends Component {
                 ]
             }
         }
-        ResMgr.Instance.preloadResPackage(resPkg,(num:any)=>{
-            console.log(num)
+        ResMgr.Instance.preloadResPackage(resPkg,(now:number,total:number)=>{
+            const progress = (now / total) * 100; // 计算进度百分比
+             console.log("==================>now,total",progress);
         },()=>{
             this.EnterGameScene()
         })

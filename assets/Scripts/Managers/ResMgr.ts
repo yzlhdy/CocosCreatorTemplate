@@ -100,7 +100,6 @@ export  class ResMgr extends Component {
             var typeClass = resPkg[key].assetType;
 
             for(var i = 0; i < urlSet.length; i ++) {
-                console.log(this.abBunds[key])
                 this.loadRes(this.abBunds[key], urlSet[i], typeClass);
             }
         }
